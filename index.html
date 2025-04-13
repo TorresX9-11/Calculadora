@@ -1,19 +1,25 @@
 <!DOCTYPE html>
+<!-- HTML para la calculadora -->
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
+    <!-- Enlace al archivo CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <div class="calculadora">
+        <!-- Pantalla de la calculadora -->
         <input type="text" id="display" readonly>
+        <!-- Contenedor de los botones -->
         <div class="botones">
+            <!-- Botones de operación -->
             <button class="operacion" onclick="operar('+')">+</button>
             <button class="operacion" onclick="operar('-')">-</button>
             <button class="operacion" onclick="operar('*')">*</button>
             <button class="operacion" onclick="operar('/')">/</button>
+            <!-- Botones numéricos -->
             <button onclick="agregarNumero('7')">7</button>
             <button onclick="agregarNumero('8')">8</button>
             <button onclick="agregarNumero('9')">9</button>
@@ -29,10 +35,12 @@
             <button onclick="agregarNumero('.')">.</button>
         </div>
     </div>
+    <!-- Contenedor para el historial -->
     <div id="historial-container">
         <h3>Historial</h3>
         <div id="historial"></div>
     </div>
+    <!-- Enlace al archivo JavaScript -->
     <script src="assets/js/script.js"></script>
 </body>
 </html>
