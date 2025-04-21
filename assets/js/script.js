@@ -84,13 +84,13 @@ function mostrarHistorial() {
 // Función para guardar el historial en localStorage
 function guardarHistorial() {
     // Guarda el historial en localStorage
-    localStorage.setItem('calculadoraHistorial', JSON.stringify(historial));
+    sessionStorage.setItem('calculadoraHistorial', JSON.stringify(historial));
 }
 
 // Cargar historial desde localStorage al cargar la página
 window.addEventListener('load', () => {
     // Carga el historial desde localStorage al cargar la página
-    let historialStorage = localStorage.getItem('calculadoraHistorial');
+    let historialStorage = sessionStorage.getItem('calculadoraHistorial');
     if (historialStorage) {
         historial = JSON.parse(historialStorage);
         mostrarHistorial();
